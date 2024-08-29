@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Message</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="my-4">Customize Your Message</h1>
+    <p class="lead">Detected placeholders from your CSV file:</p>
+    <ul class="list-group mb-4">
+        {% for column in columns %}
+        <li class="list-group-item">{{ column }}</li>
+        {% endfor %}
+    </ul>
+    <p>Use the above placeholders in your message template by surrounding them with curly brackets, e.g., <code>{name}</code>, <code>{school}</code>.</p>
+    <form method="post">
+        <div class="form-group">
+            <label for="message_template">Message Template:</label>
+            <textarea id="message_template" name="message_template" class="form-control" rows="5">
+Hi {name}, this is a message from {school}. Just wanted to reach out and say {activityDescription}!
+            </textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Send Messages</button>
+    </form>
+</body>
+</html>

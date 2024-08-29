@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages Sent</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="my-4">Messages Sent Successfully</h1>
+    <ul class="list-group">
+        {% for message in success_messages %}
+        <li class="list-group-item">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="btn btn-primary mt-4">Send More Messages</a>
+</body>
+</html>
