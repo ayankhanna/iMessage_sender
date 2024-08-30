@@ -61,7 +61,7 @@ def customize_message(filename):
             if phone_number:
                 print(f"Sending to {phone_number}: {filled_message}")  # Debug print
                 send_imessage(phone_number, filled_message)
-                rateLimiter = random.randrange(60,180)
+                rateLimiter = random.randrange(30,100)
                 time.sleep(rateLimiter)
         
         return "Messages sent!"
